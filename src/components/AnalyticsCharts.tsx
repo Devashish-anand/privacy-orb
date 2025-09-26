@@ -169,7 +169,7 @@ export const AnalyticsCharts = () => {
                 cy="50%"
                 outerRadius={80}
                 dataKey="value"
-                label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
+                label={(entry: any) => `${entry.name} ${(entry.percent * 100).toFixed(0)}%`}
               >
                 {eventDistribution.map((entry, index) => (
                   <Cell key={`cell-${index}`} fill={entry.color} />
